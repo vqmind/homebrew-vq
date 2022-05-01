@@ -12,6 +12,6 @@ class Vq < Formula
   end
 
   test do
-    assert_match "seattle2", shell_output(" echo '{\"city\":\"seattle\"}' | #{bin}/vq \"$.city\" ")
+    assert_match "seattle", shell_output(" echo '{\"city\":\"seattle\"}' | #{bin}/vq \"$.city\" ")
   end
 end
