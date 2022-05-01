@@ -6,12 +6,12 @@ class Vq < Formula
   license "MIT"
  
   def install
-      inreplace "brew/vq", "##PREFIX##", "#{prefix}"
-      prefix.install "app-1.0.0.jar"
-      bin.install "brew/vq"
+    inreplace "brew/vq", "##PREFIX##", "#{prefix}"
+    prefix.install "app-1.0.0.jar"
+    bin.install "brew/vq"
   end
  
   test do
-      assert_match "seattle", shell_output(" echo '{\"city\":\"seattle\"}' | #{bin}/vq \"$.city\" ")
+    assert_match "seattle", shell_output(" echo '{\"city\":\"seattle\"}' | #{bin}/vq \"$.city\" ")
   end
 end
